@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的个人网站</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px;
+            font-family: Arial;
+        }
+        /* 渐变背景样式 */
+        body {
+        text-align: center;
+        margin-top: 100px;
+        font-family: Arial;
+        /* 渐变背景：从浅蓝到浅紫，方向从上到下 */
+        background: linear-gradient(to bottom, #e0f7fa, #f3e5f5);
+        min-height: 100vh;
+        margin: 0;
+        padding-top: 100px;
+    }
+        h1 {
+            color: #2c3e50;
+        }
+        p {
+            color: #7f8c8d;
+            font-size: 18px;
+        }
+        /* 新增：图片容器 - 核心是flex布局实现并排 */
+        .img-container {
+            display: flex; /* 让子元素（图片）横向排列 */
+            justify-content: center; /* 图片整体水平居中 */
+            gap: 20px; /* 图片之间的间距（替代margin，更简洁） */
+            flex-wrap: wrap; /* 屏幕宽度不够时自动换行，适配手机/小屏幕 */
+            padding: 0 20px; /* 左右留边，避免贴边 */
+        }
+        /* 统一设置所有图片样式 */
+        .img-container img {
+            width: 300px;
+            border-radius: 8px;
+            /* 去掉原有margin，改用gap控制间距更统一 */
+        }
+    </style>
+</head>
+<body>
+    <h1>hello</h1>
+    <!-- 图片容器：包裹所有要并排的图片 -->
+    <div class="img-container">
+        <!-- 第一张图 -->
+        <img src="image/白芸豆.jpg" alt="你不理我我就这样">
+        <!-- 第二张图：复制img标签，改src和alt即可 -->
+        <img src="image/黄豆.jpg" alt="第二张照片">
+        <!-- 第三张图：继续添加 -->
+        <img src="image/布偶.jpg" alt="第三张照片">
+    </div>
+</body>
+</html>
